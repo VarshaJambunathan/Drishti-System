@@ -1,4 +1,4 @@
 ﻿  DrishtiSystem1.cpp
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(78): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(52): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
   DrishtiSystem1.vcxproj -> C:\Users\Varsha\documents\visual studio 2015\Projects\DrishtiSystem1\Debug\DrishtiSystem1.exe
   DrishtiSystem1.vcxproj -> C:\Users\Varsha\documents\visual studio 2015\Projects\DrishtiSystem1\Debug\DrishtiSystem1.pdb (Full PDB)

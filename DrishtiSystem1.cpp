@@ -5,73 +5,48 @@
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	//Runway track
+	//Positive sensor
+
+	//Outer boundary
 	glColor3f(0, 0, 0);
+	glLineWidth(3);
+	glBegin(GL_LINE_STRIP);
+	glVertex2f(373,170);
+	glVertex2f(410, 170);
+	glVertex2f(450,50);
+	glVertex2f(250,50);
+	glVertex2f(290, 170);
+	glVertex2f(316, 170);
+	glEnd();
+
+	//Inner boundary
+	glBegin(GL_LINE_STRIP);
+	glVertex2f(380,140);
+	glVertex2f(400,140);
+	glVertex2f(420, 80);
+	glVertex2f(280, 80);
+	glVertex2f(300, 140);
+	glVertex2f(312,140);
+	glEnd();
+
+	//Left upward sensor
 	glBegin(GL_LINES);
-	glVertex2f(-490, -490);
-	glVertex2f(490, -490);
-	glVertex2f(-490, -300);
-	glVertex2f(490, -300);
+	glVertex2f(310, 120);
+	glVertex2f(330, 300);
+	glVertex2f(380, 120);
+	glVertex2f(360,300);
 	glEnd();
 
-
-	//Runway's partition quads1
-	glColor3f(0, 0, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(-490, -420);
-	glVertex2f(-490, -380);
-	glVertex2f(-440, -380);
-	glVertex2f(-440, -420);
-	glEnd();
-
-	//Runway's partition quads2
-	glColor3f(0, 0, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(-390, -380);
-	glVertex2f(-250, -380);
-	glVertex2f(-250, -420);
-	glVertex2f(-390, -420);
-	glEnd();
-
-	//Runway's partition quads3
-	glColor3f(0, 0, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(-200, -380);
-	glVertex2f(-25, -380);
-	glVertex2f(-25, -420);
-	glVertex2f(-200, -420);
-	glEnd();
-
-	//Runway's partition quads4
-	glColor3f(0, 0, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(200, -380);
-	glVertex2f(25, -380);
-	glVertex2f(25, -420);
-	glVertex2f(200, -420);
-	glEnd();
-
-	//Runway's partition quads5
-	glColor3f(0, 0, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(390, -380);
-	glVertex2f(250, -380);
-	glVertex2f(250, -420);
-	glVertex2f(390, -420);
-	glEnd();
-
-	//Runway's partition quads6
-	glColor3f(0, 0, 0);
-	glBegin(GL_QUADS);
-	glVertex2f(490, -420);
-	glVertex2f(490, -380);
-	glVertex2f(440, -380);
-	glVertex2f(440, -420);
+	//Uppper square
+	glBegin(GL_POLYGON);
+	glVertex2f(310, 300);
+	glVertex2f(310, 350);
+	glVertex2f(380, 350);
+	glVertex2f(380, 300);
 	glEnd();
 
 	glFlush();
 }
-
 
 void init() {
 	glClearColor(1, 1, 0.7, 0);
