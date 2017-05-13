@@ -5,45 +5,39 @@
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	//Positive sensor
-
-	//Outer boundary
+	//Negative sensor
 	glColor3f(0, 0, 0);
 	glLineWidth(3);
 	glBegin(GL_LINE_STRIP);
-	glVertex2f(373,170);
-	glVertex2f(410, 170);
-	glVertex2f(450,50);
-	glVertex2f(250,50);
-	glVertex2f(290, 170);
-	glVertex2f(316, 170);
+	glVertex2f(-480, -400); //LU
+	glVertex2f(-480,-440);  //LD
+	glVertex2f(-400,-480);  //MD
+	glVertex2f(-270,-420);  //RD
+	glVertex2f(-270,-380);  //RU
+	glVertex2f(-400, -445); //MU
+	glVertex2f(-480, -400);  //LU
+	glVertex2f(-430, -370);  //LUU
 	glEnd();
 
-	//Inner boundary
-	glBegin(GL_LINE_STRIP);
-	glVertex2f(380,140);
-	glVertex2f(400,140);
-	glVertex2f(420, 80);
-	glVertex2f(280, 80);
-	glVertex2f(300, 140);
-	glVertex2f(312,140);
-	glEnd();
-
-	//Left upward sensor
+	//Base middle line
 	glBegin(GL_LINES);
-	glVertex2f(310, 120);
-	glVertex2f(330, 300);
-	glVertex2f(380, 120);
-	glVertex2f(360,300);
+	glVertex2f(-400, -480);  //MD
+	glVertex2f(-400, -445); //MU
+	glEnd();
+	
+	//Stool Base
+	glLineWidth(7);
+	glBegin(GL_LINES);
+	glVertex2f(-430, -390); //Left
+	glVertex2f(-430, -340);
+	glVertex2f(-310, -340);  //Right
+	glVertex2f(-310, -390);
+	glVertex2f(-380, -420); //Middle
+	glVertex2f(-380, -380);
 	glEnd();
 
-	//Uppper square
-	glBegin(GL_POLYGON);
-	glVertex2f(310, 300);
-	glVertex2f(310, 350);
-	glVertex2f(380, 350);
-	glVertex2f(380, 300);
-	glEnd();
+	
+	//
 
 	glFlush();
 }
