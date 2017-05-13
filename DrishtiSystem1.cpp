@@ -86,6 +86,30 @@ void display() {
 	glVertex2f(-402,-125);
 	glEnd();
 
+	//Sensor neck
+	glBegin(GL_LINES);
+	glVertex2f(-370, -25); //Back of box
+	glVertex2f(-370, 175); //Back of box
+	glVertex2f(-365, -25); //Back of box
+	glVertex2f(-365, 175); //Back of box
+	glVertex2f(-355, -25); //Back of box
+	glVertex2f(-355, 175); //Back of box
+
+	glEnd();
+	//Sensor Head
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(-370, 175); //Back of box
+	glVertex2f(-365, 175); //Back of box
+	glVertex2f(-355, 175); //Back of box
+	glVertex2f(-340, 175); //Back of box
+	glVertex2f(-340, 200); //Back of box
+	glVertex2f(-355, 200); //Back of box
+	glVertex2f(-365, 200); //Back of box
+	glVertex2f(-370, 200); //Back of box
+	glEnd();
+
+
+
 	glFlush();
 }
 
