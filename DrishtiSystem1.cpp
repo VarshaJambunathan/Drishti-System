@@ -23,6 +23,8 @@ void display() {
 	glBegin(GL_LINES);
 	glVertex2f(-400, -480);  //MD
 	glVertex2f(-400, -445); //MU
+	glVertex2f(-270, -380);  //RU
+	glVertex2f(-310, -355);  //RLegs
 	glEnd();
 	
 	//Stool Legs
@@ -37,6 +39,30 @@ void display() {
 	glEnd();
 
 	//Stool Base
+	glLineWidth(3);
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(-410, -300);  //LM
+	glVertex2f(-430, -340); //L
+	glVertex2f(-380, -380); //M
+	glVertex2f(-310, -340);  //R
+	glVertex2f(-330, -300);  //RM
+	glEnd();
+
+	//Block on Stool
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(-410, -230);
+	glVertex2f(-410, -300);  //LM
+	glVertex2f(-330, -300);  //RM
+	glVertex2f(-330,-200);
+	glVertex2f(-350, -210); //down FOR BOX
+	glVertex2f(-410, -210);
+	glEnd();
+
+	//Upper box
+	glBegin(GL_LINE_STRIP);
+	glVertex2f(-350, -135);
+
+	glEnd();
 
 	glFlush();
 }
