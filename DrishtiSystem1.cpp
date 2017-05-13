@@ -56,12 +56,34 @@ void display() {
 	glVertex2f(-330,-200);
 	glVertex2f(-350, -210); //down FOR BOX
 	glVertex2f(-410, -210);
+	glVertex2f(-410, -230);
+
 	glEnd();
 
 	//Upper box
-	glBegin(GL_LINE_STRIP);
-	glVertex2f(-350, -135);
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(-414, -210);//DL
+	glVertex2f(-414, -35); //UL
+	glVertex2f(-350, -35); //ML
+	glVertex2f(-330, -25); //UR
+	glVertex2f(-330, -200); //DR
+	glVertex2f(-350, -210); //down FOR BOX
+	glEnd();
 
+	glBegin(GL_LINES);
+	
+	glVertex2f(-350, -210); //down FOR BOX
+	glVertex2f(-350, -35);
+	glVertex2f(-412, -35); //UL
+	glVertex2f(-395, -25); //Back of box
+	glVertex2f(-395, -25); //Back of box
+	glVertex2f(-330, -25); //UR
+	glEnd();
+
+	//Knob
+	glPointSize(7);
+	glBegin(GL_POINTS);
+	glVertex2f(-402,-125);
 	glEnd();
 
 	glFlush();
