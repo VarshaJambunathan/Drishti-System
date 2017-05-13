@@ -25,7 +25,7 @@ void display() {
 	glVertex2f(-400, -445); //MU
 	glEnd();
 	
-	//Stool Base
+	//Stool Legs
 	glLineWidth(7);
 	glBegin(GL_LINES);
 	glVertex2f(-430, -390); //Left
@@ -36,8 +36,7 @@ void display() {
 	glVertex2f(-380, -380);
 	glEnd();
 
-	
-	//
+	//Stool Base
 
 	glFlush();
 }
