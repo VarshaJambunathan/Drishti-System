@@ -4,21 +4,22 @@
 
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
-	
+
 	//Runway track
 	glColor3f(0, 0, 0);
 	glBegin(GL_LINES);
-	glVertex2f(-490,-490);
-	glVertex2f(490,-490);
-	glVertex2f(-490,-300);
-	glVertex2f(490,-300);
+	glVertex2f(-490, -490);
+	glVertex2f(490, -490);
+	glVertex2f(-490, -300);
+	glVertex2f(490, -300);
 	glEnd();
+
 
 	//Runway's partition quads1
 	glColor3f(0, 0, 0);
 	glBegin(GL_QUADS);
-	glVertex2f(-490,-420);
-	glVertex2f(-490,-380);
+	glVertex2f(-490, -420);
+	glVertex2f(-490, -380);
 	glVertex2f(-440, -380);
 	glVertex2f(-440, -420);
 	glEnd();
@@ -26,10 +27,10 @@ void display() {
 	//Runway's partition quads2
 	glColor3f(0, 0, 0);
 	glBegin(GL_QUADS);
-	glVertex2f(-390,-380);
-	glVertex2f(-250,-380);
-	glVertex2f(-250,-420);
-	glVertex2f(-390,-420);
+	glVertex2f(-390, -380);
+	glVertex2f(-250, -380);
+	glVertex2f(-250, -420);
+	glVertex2f(-390, -420);
 	glEnd();
 
 	//Runway's partition quads3
@@ -67,8 +68,6 @@ void display() {
 	glVertex2f(440, -380);
 	glVertex2f(440, -420);
 	glEnd();
-
-
 
 	glFlush();
 }
