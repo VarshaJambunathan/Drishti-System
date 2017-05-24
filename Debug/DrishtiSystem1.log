@@ -2,17 +2,17 @@
 c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(16): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(222): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(226): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(234): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(235): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(241): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(245): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(249): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(259): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(260): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(261): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(267): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(691): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(692): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(787): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(231): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(232): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(237): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(241): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(245): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(250): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(251): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(252): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(257): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(757): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(762): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\varsha\documents\visual studio 2015\projects\drishtisystem1\drishtisystem1\drishtisystem1.cpp(857): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
   DrishtiSystem1.vcxproj -> C:\Users\Varsha\documents\visual studio 2015\Projects\DrishtiSystem1\Debug\DrishtiSystem1.exe
   DrishtiSystem1.vcxproj -> C:\Users\Varsha\documents\visual studio 2015\Projects\DrishtiSystem1\Debug\DrishtiSystem1.pdb (Full PDB)

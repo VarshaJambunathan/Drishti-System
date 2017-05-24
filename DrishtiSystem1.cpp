@@ -224,17 +224,13 @@ void PWQ_clouds() {
 	{
 		glColor3f(0, 1.0, 1.0);
 		draw_circle(160 + m, 325, l);
-
 	}
-
-
 	for (l = 0; l <= 35; l++)
 	{
 		glColor3f(0, 1.0, 1.0);
 		draw_circle(200 + m, 325, l);
 		draw_circle(225 + m, 325, l);
 	}
-
 	for (l = 0; l <= 20; l++)
 	{
 		glColor3f(0, 1.0, 1.0);
@@ -248,19 +244,13 @@ void PWQ_clouds() {
 		glColor3f(1.0, 1.0, 1.0);
 		draw_circle(370 + m, 615, l);
 	}
-
-
-
-
 	for (l = 0; l <= 35; l++)
 	{
-
 		glColor3f(1.0, 1.0, 1.0);
 		draw_circle(410 + m, 615, l);
 		draw_circle(435 + m, 615, l);
 		draw_circle(470 + m, 615, l);
 	}
-
 	for (l = 0; l <= 20; l++)
 	{
 		glColor3f(1.0, 1.0, 1.0);
@@ -279,13 +269,15 @@ void plane_with_question() {
 	glTranslated(a, b, 0.0);
 	PWQ_initialPlane();
 	glPopMatrix();
+
+	FP_tyres();
 }
 
 void SO_positiveSensor() {
 	//Positive sensor
 
 	//Outer boundary
-	glColor3f(0, 0, 0);
+	glColor3f(0.0, 0.0, 0.0);
 	glLineWidth(3);
 	glBegin(GL_LINE_STRIP);
 	glVertex2f(373, 170);
@@ -297,7 +289,8 @@ void SO_positiveSensor() {
 	glEnd();
 
 	//Inner boundary
-	glBegin(GL_LINE_STRIP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(380, 140);
 	glVertex2f(400, 140);
 	glVertex2f(420, 80);
@@ -307,11 +300,13 @@ void SO_positiveSensor() {
 	glEnd();
 
 	//Left upward sensor
-	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glBegin(GL_LINE_STRIP);
 	glVertex2f(310, 120);
 	glVertex2f(330, 300);
-	glVertex2f(380, 120);
 	glVertex2f(360, 300);
+	glVertex2f(380, 120);
+
 	glEnd();
 
 	//Uppper square
@@ -324,11 +319,35 @@ void SO_positiveSensor() {
 	glEnd();
 }
 
+void SO_lightEmit() {
+	glColor3f(0, 0, 0);
+	glLineWidth(1);
+
+	glBegin(GL_LINES);
+	//Upper line
+	glVertex2f(320, 350);
+	glVertex2f(0, 400);
+
+	//Lower line
+	glVertex2f(320, 300);
+	glVertex2f(-10, 250);
+	glEnd();
+
+	//Square for emmitting light
+	glColor3f(1.0,1.0,0.0);
+	glBegin(GL_QUADS);
+	glVertex2f(250, 350);
+	glVertex2f(200, 350);
+	glVertex2f(200, 300);
+	glVertex2f(250, 300);
+	glEnd();
+}
+
 void SO_negativeSensor() {
 	//Negative sensor
 	glColor3f(0, 0, 0);
 	glLineWidth(3);
-	glBegin(GL_LINE_STRIP);
+	glBegin(GL_LINE_LOOP);
 	glVertex2f(-480, -400); //LU
 	glVertex2f(-480, -440);  //LD
 	glVertex2f(-400, -480);  //MD
@@ -360,7 +379,8 @@ void SO_negativeSensor() {
 
 	//Stool Base
 	glLineWidth(3);
-	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(-410, -300);  //LM
 	glVertex2f(-430, -340); //L
 	glVertex2f(-380, -380); //M
@@ -369,6 +389,7 @@ void SO_negativeSensor() {
 	glEnd();
 
 	//Block on Stool
+	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINE_LOOP);
 	glVertex2f(-410, -230);
 	glVertex2f(-410, -300);  //LM
@@ -381,7 +402,8 @@ void SO_negativeSensor() {
 	glEnd();
 
 	//Upper box
-	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(-414, -210);//DL
 	glVertex2f(-414, -35); //UL
 	glVertex2f(-350, -35); //ML
@@ -390,6 +412,7 @@ void SO_negativeSensor() {
 	glVertex2f(-350, -210); //down FOR BOX
 	glEnd();
 
+	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
 
 	glVertex2f(-350, -210); //down FOR BOX
@@ -417,7 +440,8 @@ void SO_negativeSensor() {
 
 	glEnd();
 	//Sensor Head
-	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(-370, 175); //Back of box
 	glVertex2f(-365, 175); //Back of box
 	glVertex2f(-355, 175); //Back of box
@@ -429,52 +453,89 @@ void SO_negativeSensor() {
 	glEnd();
 }
 
+void SO_lightResult() {
+	//Square for resulting light data
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin(GL_QUADS);
+	glVertex2f(-225, 250);
+	glVertex2f(-190, 250);
+	glVertex2f(-190, 310);
+	glVertex2f(-225, 310);
+	glEnd();
+
+	//Data lines
+	glColor3f(0.0, 0.0, 0.0);
+	glLineWidth(3);
+	glBegin(GL_LINES);
+	glVertex2f(-195, 262);
+	glVertex2f(-220, 262);
+
+	glVertex2f(-195, 272);
+	glVertex2f(-220, 272);
+
+	glVertex2f(-195, 282);
+	glVertex2f(-220, 282);
+
+	glVertex2f(-195, 292);
+	glVertex2f(-220, 292);
+
+	glVertex2f(-195, 302);
+	glVertex2f(-220, 302);
+
+	glEnd();
+}
+
 void sensors_only() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	SO_positiveSensor();
 	SO_negativeSensor();
+	SO_lightEmit();
+	SO_lightResult();
 }
 
 void SCR_positiveSensor() {
 	//Positive sensor
 
 	//Outer boundary
-	glColor3f(0, 0, 0);
+	glColor3f(0.0, 0.0, 0.0);
 	glLineWidth(3);
 	glBegin(GL_LINE_STRIP);
-	glVertex2f(-373, -170);
-	glVertex2f(-410, -170);
-	glVertex2f(-450, -50);
-	glVertex2f(-250, -50);
-	glVertex2f(-290, -170);
-	glVertex2f(-316, -170);
+	glVertex2f(373, 170);
+	glVertex2f(410, 170);
+	glVertex2f(450, 50);
+	glVertex2f(250, 50);
+	glVertex2f(290, 170);
+	glVertex2f(316, 170);
 	glEnd();
 
 	//Inner boundary
-	glBegin(GL_LINE_STRIP);
-	glVertex2f(-380, -140);
-	glVertex2f(-400, -140);
-	glVertex2f(-420, -80);
-	glVertex2f(-280, -80);
-	glVertex2f(-300, -140);
-	glVertex2f(-312, -140);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(380, 140);
+	glVertex2f(400, 140);
+	glVertex2f(420, 80);
+	glVertex2f(280, 80);
+	glVertex2f(300, 140);
+	glVertex2f(312, 140);
 	glEnd();
 
 	//Left upward sensor
-	glBegin(GL_LINES);
-	glVertex2f(-310, -120);
-	glVertex2f(-330, -300);
-	glVertex2f(-380, -120);
-	glVertex2f(-360, -300);
+	glColor3f(0.0, 0.0, 0.0);
+	glBegin(GL_LINE_STRIP);
+	glVertex2f(310, 120);
+	glVertex2f(330, 300);
+	glVertex2f(360, 300);
+	glVertex2f(380, 120);
+
 	glEnd();
 
 	//Uppper square
 	glColor3f(1.0, 0.0, 0.0);
 	glBegin(GL_POLYGON);
-	glVertex2f(-320, -300);
-	glVertex2f(-320, -350);
-	glVertex2f(-370, -350);
-	glVertex2f(-370, -300);
+	glVertex2f(320, 300);
+	glVertex2f(320, 350);
+	glVertex2f(370, 350);
+	glVertex2f(370, 300);
 	glEnd();
 
 }
@@ -482,7 +543,7 @@ void SCR_negativeSensor() {
 	//Negative sensor
 	glColor3f(0, 0, 0);
 	glLineWidth(3);
-	glBegin(GL_LINE_STRIP);
+	glBegin(GL_LINE_LOOP);
 	glVertex2f(-480, -400); //LU
 	glVertex2f(-480, -440);  //LD
 	glVertex2f(-400, -480);  //MD
@@ -514,7 +575,8 @@ void SCR_negativeSensor() {
 
 	//Stool Base
 	glLineWidth(3);
-	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(-410, -300);  //LM
 	glVertex2f(-430, -340); //L
 	glVertex2f(-380, -380); //M
@@ -523,6 +585,7 @@ void SCR_negativeSensor() {
 	glEnd();
 
 	//Block on Stool
+	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINE_LOOP);
 	glVertex2f(-410, -230);
 	glVertex2f(-410, -300);  //LM
@@ -535,7 +598,8 @@ void SCR_negativeSensor() {
 	glEnd();
 
 	//Upper box
-	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(-414, -210);//DL
 	glVertex2f(-414, -35); //UL
 	glVertex2f(-350, -35); //ML
@@ -544,6 +608,7 @@ void SCR_negativeSensor() {
 	glVertex2f(-350, -210); //down FOR BOX
 	glEnd();
 
+	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
 
 	glVertex2f(-350, -210); //down FOR BOX
@@ -571,7 +636,8 @@ void SCR_negativeSensor() {
 
 	glEnd();
 	//Sensor Head
-	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(-370, 175); //Back of box
 	glVertex2f(-365, 175); //Back of box
 	glVertex2f(-355, 175); //Back of box
@@ -685,11 +751,15 @@ void SCR_mailbox() {
 void FP_tyres() {
 	//Tyres
 	
-	for (l = 0; l<5; l++)
+	for (l = 0; l<10; l++)//first tyre
 	{
 		glColor3f(1.0, 0.0, 0.0);
-		draw_circle(-460 + i, 50, l);
-		draw_circle(-390 + i, 50, l);
+		draw_circle(-150, -200, l);
+	}
+	for (l = 0; l<10; l++)//second tyre
+	{
+		glColor3f(1.0, 0.0, 0.0);
+		draw_circle(-250, -200, l);
 	}
 }
 
@@ -704,7 +774,7 @@ void sensor_with_control_room() {
 
 void INIT_printNames() {
 	glColor3f(0, 1, 0);
-	drawStrokeText("Welcome", 20, 20, 0);
+	drawStrokeText("Drishti", 20, 20, 0);
 }
 
 void INIT_printKeys() {
